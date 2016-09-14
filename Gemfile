@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
@@ -24,6 +23,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# SHOUTcast API wrapper
+gem 'shoutcast-api-client', github: 'marcferna/shoutcast-api-client', branch: 'master'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -33,6 +35,9 @@ group :development, :test do
 
   # Use Factory Girl for generating random test data
   gem 'factory_girl_rails'
+
+  # Loads environment variables from `.env`.
+  gem 'dotenv-rails'
 end
 
 group :development do
