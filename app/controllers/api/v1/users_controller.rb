@@ -20,12 +20,11 @@ module Api::V1
       end
     end
 
-  private
+    private
 
     # Only allow a trusted parameter "white list" through.
     def user_params
       params.require(:user).permit(:name, :email, :password)
     end
-
   end
 end

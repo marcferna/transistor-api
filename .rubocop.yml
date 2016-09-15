@@ -1,0 +1,23 @@
+Rails:
+  Enabled: true
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Excludes:
+    - config/unicorn.rb
+    - db/**
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/AlignParameters:
+  Enabled: false
+
+Documentation:
+  Enabled: false

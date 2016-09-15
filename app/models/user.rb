@@ -6,7 +6,7 @@ class User < ApplicationRecord
     user.api_key = user.generate_api_key
   end
 
-protected
+  protected
 
   # Generate a unique API key
   def generate_api_key

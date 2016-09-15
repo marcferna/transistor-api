@@ -4,7 +4,9 @@ module Api::V1
 
     # POST /sessions
     def create
-      user = User.find_by(email: session_params[:email]).try(:authenticate, session_params[:password])
+      user = User.find_by(
+        email: session_params[:email]
+      ).try(:authenticate, session_params[:password])
 
       if user.present?
         render json: user, status: :created
@@ -13,7 +15,7 @@ module Api::V1
       end
     end
 
-  private
+    private
 
     # Only allow a trusted parameter "white list" through.
     def session_params
