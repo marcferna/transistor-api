@@ -4,9 +4,12 @@ Rails.application.routes.draw do
       namespace :v1 do
         resources :sessions, only: [:create]
         resources :users, only: [:create, :update]
-        resources :stations, only: [:index]
+        resources :stations, only: [:index] do
+          collection do
+            get 'search'
+          end
+        end
       end
     end
   end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

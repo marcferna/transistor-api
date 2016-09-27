@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/marcferna/shoutcast-api-client.git
-  revision: 625eba6fae44b4eebf66af0e0e77b713bd81de05
+  revision: dce5eb91611c033ff40d3bd9530ec6f9b5b88bf8
   branch: master
   specs:
     shoutcast-api-client (0.0.1)
