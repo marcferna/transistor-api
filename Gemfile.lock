@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/marcferna/shoutcast-api-client.git
-  revision: dce5eb91611c033ff40d3bd9530ec6f9b5b88bf8
+  revision: dcf00498cf0ea3eb7494165e4cabc6f0cb409fee
   branch: master
   specs:
-    shoutcast-api-client (0.0.1)
+    shoutcast-api-client (0.0.2)
       nokogiri (~> 1.6)
       nori (~> 2.6)
       rest-client (~> 2.0)
@@ -59,8 +59,9 @@ GEM
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
+    dalli (2.7.6)
     diff-lcs (1.2.5)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
@@ -75,7 +76,7 @@ GEM
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    http-cookie (1.0.2)
+    http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.7.0)
     json (1.8.3)
@@ -195,6 +196,7 @@ DEPENDENCIES
   active_model_serializers
   bcrypt (~> 3.1.7)
   byebug
+  dalli
   dotenv-rails
   factory_girl_rails
   listen (~> 3.0.5)
@@ -209,4 +211,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.12.5
+   1.13.6

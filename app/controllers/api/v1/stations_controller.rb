@@ -4,7 +4,10 @@ module Api::V1
 
     # GET /stations
     def index
-      render json: client.top_500
+      stations = Rails.cache.fetch 'stations/top500', expires_in: 1.day do
+        client.top_500
+      end
+      render json: stations
     end
 
     # GET /stations/search

@@ -29,6 +29,9 @@ gem 'shoutcast-api-client',
     github: 'marcferna/shoutcast-api-client',
     branch: 'master'
 
+# High performance memcached
+gem 'dalli'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
