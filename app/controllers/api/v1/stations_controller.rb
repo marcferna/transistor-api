@@ -12,7 +12,14 @@ module Api::V1
 
     # GET /stations/search
     def search
-      render json: client.search(keyword: params['keyword'])
+      keyword = params['keyword']
+      stations = Rails.cache.fetch(
+        "stations/search/#{keyword}",
+        expires_in: 1.day
+      ) do
+        client.search(keyword: keyword)
+      end
+      render json: stations
     end
 
     private
